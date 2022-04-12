@@ -1,0 +1,34 @@
+#include<stdio.h>
+typedef struct reminder
+{
+    char date[15];
+    char time[15];
+    char task[100];
+}reminder;
+reminder ar;
+void printing(void);
+void main()
+{
+    
+    int ch;
+    printf("Enter the date in dd/mm/yyyy format\n");
+    scanf("%s",ar.date);
+    printf("Enter the time in 24 hour format as hh:mm\n");
+    scanf("%s",ar.time);
+    printf("Enter the thing to be reminded\n");
+    scanf("%s",ar.task);
+    printf("Do you want to see your pending reminders  :0 for yes/1 for no\n");
+    scanf("%d",&ch);
+    if(ch==0)
+        printing();
+    else
+        printf("Ok End of code\n");    
+}
+void printing()
+{
+    printf("SCHEDULED REMINDER NOTIFICATION\n");
+    printf("REMINDER IS FOR\n");
+    printf("DATE:\t%s\n",ar.date);
+    printf("Time:\t%s\n",ar.time);
+    printf("Reminder:\t%s\n",ar.task);
+}
